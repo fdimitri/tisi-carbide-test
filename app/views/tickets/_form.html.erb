@@ -1,0 +1,64 @@
+<%= form_for(@ticket) do |f| %>
+  <% if @ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+
+      <ul>
+      <% @ticket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="ticketEdit">
+    <div class="ticketEditField">
+      <h2>Title</h2>
+      <%= f.text_field :title %>
+    </div>
+    <div class="ticketEditField">
+      <h2>Description</h2>
+      <%= f.text_area :desc %>
+    </div>
+    <div class="ticketEditField">
+     <h2>Steps to Reproduce</h2>
+      <%= f.text_area :reproSteps %>
+    </div>
+    <div class="ticketEditField">
+      <h2>User ID</h2>
+      <%= f.text_field :User_id %>
+    </div>
+    <div class="ticketEditField">
+      <h2>Assigned To</h2>
+      <%= f.text_field :AssignedUser_id %>
+    </div>
+    <div class="ticketEditField">
+      <h2>Priority</h2>
+      <%= f.text_field :Priority_id %>
+    </div>
+    <div class="ticketEditField">
+      <h2>State</h2>
+      <%= f.text_field :State_id %>
+    </div>
+    <div class="ticketEditField">
+      <h2>OS</h2>
+      <%= f.text_field :osdef_id %>
+    </div>
+    <div class="ticketEditField">
+      <h2>Hardware</h2>
+      <%= f.text_field :Hardware_id %>
+    </div>
+    <div class="ticketEditField">
+      <h2>Category</h2>
+      <%= f.text_field :TicketCategory_id %>
+    </div>
+    <div class="ticketEditField">
+      <h2>Sub-Category</h2>
+      <%= f.text_field :TicketGroup_id %>
+    </div>
+    <div class="ticketEditSubmit">
+      <%= f.submit %>
+    </div>
+  </div>
+
+<% end %>

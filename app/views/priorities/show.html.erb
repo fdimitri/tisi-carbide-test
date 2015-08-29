@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @priority.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @priority.desc %>
+</p>
+
+<p>
+  <strong>Enum:</strong>
+  <%= @priority.enum %>
+</p>
+
+<%= link_to 'Edit', edit_priority_path(@priority) %> |
+<%= link_to 'Back', priorities_path %>

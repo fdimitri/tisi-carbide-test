@@ -1,0 +1,25 @@
+<%= form_for(@osdef) do |f| %>
+  <% if @osdef.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@osdef.errors.count, "error") %> prohibited this osdef from being saved:</h2>
+
+      <ul>
+      <% @osdef.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br>
+    <%= f.text_field :version %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

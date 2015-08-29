@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<div class="ticketBox">
+<div class="ticketShow">
+  <div class="ticketHeader">
+    <h1><%= @ticket.title %></h1>
+  </div>
+  <div class="ticketStates">
+    <table>
+      <thead>
+        <tr>
+          <th>Submitting User</th>
+          <th>Assigned User</th>
+          <th>Priority</th>
+          <th>State</th>
+          <th>OS</th>
+          <th>Hardware</th>
+          <th>Category</th>
+          <th>Group</th>
+        </tr>  
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= link_to @ticket.User.userName, @ticket.User %></td>
+          <td><%= link_to @ticket.AssignedUser.userName, @ticket.AssignedUser %></td>
+          <td><%= @ticket.Priority.name %></td>
+          <td><%= @ticket.State.name %></td>
+          <td><%= @ticket.osdef.name %></td>
+          <td><%= @ticket.Hardware.name %></td>
+          <td><%= @ticket.TicketCategory.name %></td>
+          <td><%= @ticket.TicketGroup.name %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ticketDescription">
+    <h2>Description:</h2>
+    <div class="ticketText"><%= auto_link(@ticket.desc) %></div>
+  </div>
+  <div class="ticketReproSteps">
+    <h2>Steps to reproduce:</h2>
+    <div class="ticketText"><%= auto_link(@ticket.reproSteps) %></div>
+  </div>
+</div>
+<div class="ticketLinks">
+  <%= link_to 'Edit Ticket', edit_ticket_path(@ticket) %> |
+  <%= link_to 'Show All Tickets', tickets_path %>
+</div>
+
+<%= render @ticket.TicketUpdates %>
+</div>

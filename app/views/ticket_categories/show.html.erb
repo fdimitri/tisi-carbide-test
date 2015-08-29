@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ticket_category.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @ticket_category.desc %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @ticket_category.User %>
+</p>
+
+<p>
+  <strong>Ticketgroup:</strong>
+  <%= @ticket_category.TicketGroup %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_category_path(@ticket_category) %> |
+<%= link_to 'Back', ticket_categories_path %>

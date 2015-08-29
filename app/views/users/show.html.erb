@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="ticketBox">
+  <h1>User Information</h1>
+  <div class="ticketUsers">
+    <div class="ticketUserField">
+      <h2>Username</h2>
+      <%= @user.userName %>
+    </div>
+    
+    <div class="ticketUserField">
+      <h2>First Name</h2>
+      <%= @user.firstName %>
+    </div>
+    
+    <div class="ticketUserField">
+      <h2>Last Name</h2>
+      <%= @user.lastName %>
+    </div>
+    
+    <div class="ticketUserField">
+      <h2>Email</h2>
+      <%= @user.eMail %>
+    </div>
+  </div>
+
+  <div class="ticketLinks">
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+  </div>
+</div>

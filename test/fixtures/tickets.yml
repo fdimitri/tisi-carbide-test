@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  desc: MyText
+  reproSteps: MyString
+  User_id: 
+  AssignedUser_id: 
+  Priority_id: 
+  State_id: 
+  osdef_id: 
+  Hardware_id: 
+  TicketCategory_id: 
+  TicketGroup_id: 
+
+two:
+  title: MyString
+  desc: MyText
+  reproSteps: MyString
+  User_id: 
+  AssignedUser_id: 
+  Priority_id: 
+  State_id: 
+  osdef_id: 
+  Hardware_id: 
+  TicketCategory_id: 
+  TicketGroup_id: 

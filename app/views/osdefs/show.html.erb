@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @osdef.name %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @osdef.version %>
+</p>
+
+<%= link_to 'Edit', edit_osdef_path(@osdef) %> |
+<%= link_to 'Back', osdefs_path %>

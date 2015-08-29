@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Osdefs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Version</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @osdefs.each do |osdef| %>
+      <tr>
+        <td><%= osdef.name %></td>
+        <td><%= osdef.version %></td>
+        <td><%= link_to 'Show', osdef %></td>
+        <td><%= link_to 'Edit', edit_osdef_path(osdef) %></td>
+        <td><%= link_to 'Destroy', osdef, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Osdef', new_osdef_path %>

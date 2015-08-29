@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  desc: MyText
+  Ticket_id: 
+  User_id: 
+  AssignedUser_id: 
+  State_id: 
+  Priority_id: 
+
+two:
+  title: MyString
+  desc: MyText
+  Ticket_id: 
+  User_id: 
+  AssignedUser_id: 
+  State_id: 
+  Priority_id: 
